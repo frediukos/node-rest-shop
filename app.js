@@ -12,10 +12,10 @@ const orderRoutes = require('./api/routes/orders'); // import routes/orders
 mongoose.connect(
     "mongodb+srv://node-shop:" +
     process.env.MONGO_ATLAS_PW +
-    "@cluster0-vlo3y.mongodb.net/test?retryWrites=true&w=majority",
-    {
-        useMongoClient: true
-    }
+    "@cluster0-vlo3y.mongodb.net/test?retryWrites=true&w=majority"//,
+    // {
+    //     useMongoClient: true
+    // }
 );
 
 app.use(morgan('dev'));  //dev - format for output
