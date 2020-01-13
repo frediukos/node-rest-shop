@@ -14,9 +14,10 @@ mongoose.connect(
     process.env.MONGO_ATLAS_PW +
     "@cluster0-vlo3y.mongodb.net/test?retryWrites=true&w=majority"//,
     // {
-    //     useMongoClient: true
+    //     useMongoClient: true  // in latest version it's not needable
     // }
 );
+mongoose.Promise = global.Promise; // mongoose warnings
 
 app.use(morgan('dev'));  //dev - format for output
 app.use(bodyParser.urlencoded({extended: false})); //SUPPORT SIMPLE DATA - FALSE
